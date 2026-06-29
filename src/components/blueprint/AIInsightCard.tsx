@@ -6,7 +6,7 @@ import { cn } from '@/utils/cn'
 /** Azure AI panel — the computer-vision / copilot surface, crowned with an azure rule. */
 export function AIInsightCard({
   title,
-  eyebrow = 'Cairn AI',
+  eyebrow = 'Lodestar AI',
   children,
   className,
   footer,
