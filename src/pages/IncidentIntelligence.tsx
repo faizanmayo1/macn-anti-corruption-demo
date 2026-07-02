@@ -36,10 +36,9 @@ const sevStyle: Record<LinkedReport['severity'], string> = {
 }
 
 const kindIcon: Record<LinkedReport['kind'], typeof FileText> = {
-  Whistleblower: FileText,
-  'NGO report': FileText,
+  HelpDesk: FileText,
+  'Report comment': Layers,
   'Member submission': Database,
-  'Port intel': Layers,
 }
 
 export function IncidentIntelligence() {

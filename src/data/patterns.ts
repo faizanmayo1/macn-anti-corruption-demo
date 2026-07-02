@@ -65,7 +65,7 @@ export interface RiskLens {
 }
 
 export const riskLenses: RiskLens[] = [
-  { key: 'port', label: 'Port-risk index', subject: 'Lagos (Apapa)', score: 84, trend: 13, scale: 'highest of 50 ports' },
+  { key: 'port', label: 'Port-risk index', subject: 'Lagos (Apapa)', score: 84, trend: 13, scale: 'highest of 1,350 ports' },
   { key: 'route', label: 'Route-risk index', subject: 'Gulf of Guinea', score: 82, trend: 11, scale: 'highest of 20 corridors' },
   { key: 'actor', label: 'Actor-risk score', subject: 'Port inspectorate', score: 89, trend: 6, scale: 'highest of 9 actor types' },
 ]

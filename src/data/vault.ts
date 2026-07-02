@@ -83,8 +83,8 @@ export interface TierArch {
 
 export const tierArch: TierArch[] = [
   { key: 'vault', name: 'Restricted Vault', desc: 'Raw sensitive reports, field-level encrypted', who: 'MACN administrators', count: '1,284 records', tone: 'vault' },
-  { key: 'insights', name: 'Controlled Insights', desc: 'Correlated, pseudonymized intelligence', who: 'MACN analysts', count: '15,000 incidents', tone: 'insights' },
-  { key: 'member', name: 'Member View', desc: 'Sanitized, analytics-safe outputs', who: '30 member organizations', count: 'aggregated only', tone: 'member' },
+  { key: 'insights', name: 'Controlled Insights', desc: 'Correlated, pseudonymized intelligence', who: 'MACN analysts', count: '94,000 incidents', tone: 'insights' },
+  { key: 'member', name: 'Member View', desc: 'Sanitized, analytics-safe outputs', who: '230 member organizations', count: 'aggregated only', tone: 'member' },
 ]
 
 export const governanceControls = [

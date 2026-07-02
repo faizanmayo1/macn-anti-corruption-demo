@@ -3,14 +3,15 @@
 // and the emerging Gulf of Guinea bribery corridor that Lodestar detects early.
 
 export const macn = {
-  // Pilot data scale (mirrors the requested sample set)
-  structuredIncidents: 10000,
-  qualitativeReports: 5000,
-  totalIncidents: 15000,
+  // Data scale (grounded in MACN's real footprint: ~70k anonymous GPIP incident
+  // reports, ~230 member shipping companies, 1,350+ ports covered)
+  structuredIncidents: 70000, // anonymous incident reports in GPIP / Salesforce
+  qualitativeReports: 24000, // free-text report comments + HelpDesk emails to enrich
+  totalIncidents: 94000,
   highRiskCases: 1000,
-  ports: 50,
+  ports: 1350, // ports covered by the Global Port Integrity Platform (GPIP)
   corridors: 20,
-  members: 30,
+  members: 230, // member shipping companies
   yearsHistory: 5,
 
   // Anonymization throughput (Lodestar safe-data pipeline)
@@ -125,12 +126,12 @@ export interface IntakeItem {
 }
 
 export const incidentFeed: IntakeItem[] = [
-  { id: 'INC-08842', source: 'Whistleblower narrative', port: 'Lagos (Apapa)', type: 'Facilitation payment', severity: 'critical', status: 'linked', ago: '4m' },
-  { id: 'INC-08841', source: 'NGO report', port: 'Lomé', type: 'Inspection-hold demand', severity: 'high', status: 'structured', ago: '22m' },
+  { id: 'INC-08842', source: 'Seafarer HelpDesk report', port: 'Lagos (Apapa)', type: 'Facilitation payment', severity: 'critical', status: 'linked', ago: '4m' },
+  { id: 'INC-08841', source: 'Incident report comment', port: 'Lomé', type: 'Inspection-hold demand', severity: 'high', status: 'structured', ago: '22m' },
   { id: 'INC-08840', source: 'Member submission', port: 'Chittagong', type: 'Document fraud', severity: 'high', status: 'sanitizing', ago: '38m' },
-  { id: 'INC-08839', source: 'Port-level intel', port: 'Tema', type: 'Cash demand', severity: 'medium', status: 'structured', ago: '1h' },
-  { id: 'INC-08838', source: 'Whistleblower narrative', port: 'Nhava Sheva', type: 'Extortion', severity: 'medium', status: 'linked', ago: '2h' },
-  { id: 'INC-08837', source: 'Regulatory note', port: 'Manila', type: 'Facilitation payment', severity: 'low', status: 'structured', ago: '3h' },
+  { id: 'INC-08839', source: 'Incident report comment', port: 'Tema', type: 'Cash demand', severity: 'medium', status: 'structured', ago: '1h' },
+  { id: 'INC-08838', source: 'HelpDesk email', port: 'Nhava Sheva', type: 'Extortion', severity: 'medium', status: 'linked', ago: '2h' },
+  { id: 'INC-08837', source: 'Member submission', port: 'Manila', type: 'Facilitation payment', severity: 'low', status: 'structured', ago: '3h' },
 ]
 
 // 12-month incident intake (structured vs qualitative) for the trend chart

@@ -53,7 +53,7 @@ export const conversations: Conversation[] = [
       points: [
         'Dominant typology: facilitation payments tied to vessel holds (≈61% of reports).',
         'Primary actor type: port inspector / state official (actor-risk 89).',
-        'Port-risk index 84 (▲13) — now the highest of 50 ports.',
+        'Port-risk index 84 (▲13) — now the highest of 1,350 ports.',
       ],
       citations: ['213 incidents', 'Actor-risk model', 'Port-risk index'],
     },
@@ -83,7 +83,7 @@ export const conversations: Conversation[] = [
       citations: ['Port-risk indices', 'Member route overlap', 'Mitigation library'],
     },
     audit: {
-      sources: ['Port-risk indices (50 ports)', 'Member route overlap (aggregated)', 'Mitigation library'],
+      sources: ['Port-risk indices (1,350 ports)', 'Member route overlap (aggregated)', 'Mitigation library'],
       steps: [
         'Intersected high-risk ports with member route coverage',
         'Ranked by risk × route exposure',
@@ -97,10 +97,10 @@ export const conversations: Conversation[] = [
 ]
 
 export const capabilities = [
+  'Dynamic port-risk assessments that replace static dashboards (e.g. “top 3 demands”)',
+  'Salesforce-integrated — reads the same anonymized system of record',
   'Ask in natural language across the sanitized analytics layer',
-  'Every answer cited to its source records',
-  'Traceable decision rationale for each recommendation',
+  'Every answer cited to its source records, with a traceable rationale',
   'Respects access tier — never surfaces restricted-vault content',
   'Scenario prompts (“what if trade volume rises in region X”)',
-  'One-click escalation to MACN analysts',
 ]

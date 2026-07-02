@@ -19,7 +19,7 @@ export interface Entity {
 export const entities: Record<string, Entity> = {
   e7: { id: 'e7', raw: '14 March', replacement: 'Q1', type: 'Date / time', action: 'Generalized', reason: 'Temporal precision can narrow a case to one voyage.', tier: 'internal', rule: 'MACN policy · temporal generalization' },
   e4: { id: 'e4', raw: 'MV Celestine', replacement: '[vessel]', type: 'Vessel name', action: 'Redacted', reason: 'Identifies the company, voyage and crew.', tier: 'highly', rule: 'MACN policy · direct-identifier removal' },
-  e1: { id: 'e1', raw: 'M. Okonkwo', replacement: '[vessel master]', type: 'Person · vessel master', action: 'Redacted', reason: 'Direct personal identifier (PII) of the reporter.', tier: 'highly', rule: 'MACN policy · whistleblower protection' },
+  e1: { id: 'e1', raw: 'M. Okonkwo', replacement: '[vessel master]', type: 'Person · vessel master', action: 'Redacted', reason: 'Direct personal identifier (PII) of the reporter.', tier: 'highly', rule: 'MACN policy · reporter protection' },
   e5: { id: 'e5', raw: 'Meridian Shipping Ltd', replacement: '[member company]', type: 'Organization · member', action: 'Redacted', reason: 'Member confidentiality — company must not be attributable.', tier: 'highly', rule: 'Member-level rule · company shielding' },
   e2: { id: 'e2', raw: 'A. Bello', replacement: '[port official]', type: 'Person · port inspector', action: 'Redacted', reason: 'Direct identifier of a named individual.', tier: 'highly', rule: 'MACN policy · direct-identifier removal' },
   e3: { id: 'e3', raw: 'USD 4,500', replacement: '~USD 4.5K', type: 'Monetary amount', action: 'Generalized', reason: 'Exact figure could re-identify the incident.', tier: 'sensitive', rule: 'MACN policy · figure banding' },
@@ -52,8 +52,8 @@ export const narrative: Token[] = [
 export const source = {
   incidentId: 'INC-08842',
   salesforceCase: 'SF-44719',
-  channel: 'Whistleblower narrative',
-  receivedVia: 'Secure member portal',
+  channel: 'Seafarer HelpDesk report',
+  receivedVia: 'MACN HelpDesk · secure intake',
   port: 'Lagos (Apapa), Nigeria',
   words: 58,
 }

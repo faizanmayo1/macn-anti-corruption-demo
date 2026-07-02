@@ -39,7 +39,7 @@ import { cn } from '@/utils/cn'
 const bandStyle: Record<RiskBand, { fill: string; ring: string; label: string }> = {
   high: { fill: '#DC2626', ring: 'ring-signal-risk/30', label: 'High-risk' },
   elevated: { fill: '#CE7519', ring: 'ring-gold/30', label: 'Elevated' },
-  watch: { fill: '#2F5763', ring: 'ring-steel-400/30', label: 'Watch' },
+  watch: { fill: '#3B5178', ring: 'ring-steel-400/30', label: 'Watch' },
   clear: { fill: '#15803D', ring: 'ring-signal-positive/30', label: 'Clear' },
 }
 
@@ -69,7 +69,7 @@ function TrendTooltip({ active, payload, label }: ChartTooltipProps) {
       <p className="font-mono text-[10px] uppercase tracking-[0.1em] text-ink-subtle">{label}</p>
       {payload.map((p) => (
         <p key={p.dataKey as string} className="mt-0.5 flex items-center gap-1.5 text-[11.5px] text-ink">
-          <span className="h-2 w-2 rounded-full" style={{ background: p.dataKey === 'structured' ? '#0E2E38' : '#0FB5A6' }} />
+          <span className="h-2 w-2 rounded-full" style={{ background: p.dataKey === 'structured' ? '#0B2545' : '#1668C4' }} />
           <span className="capitalize text-ink-muted">{p.dataKey}</span>
           <span className="ml-auto font-mono tabular">{p.value}</span>
         </p>
@@ -88,7 +88,7 @@ function RiskMap() {
   return (
     <div className="relative overflow-hidden rounded-xl border border-hairline bg-card shadow-card-sm">
       <div className="flex items-center justify-between border-b border-hairline px-5 py-3.5">
-        <SectionHead title="Global corruption risk" hint="50 ports · 20 corridors" icon={Globe2} />
+        <SectionHead title="Global corruption risk" hint="1,350 ports · 20 corridors" icon={Globe2} />
         <span className="hidden items-center gap-1.5 rounded-full border border-hairline bg-canvas-subtle px-2.5 py-1 font-mono text-[9.5px] uppercase tracking-[0.1em] text-ink-subtle sm:flex">
           <span className="relative inline-flex h-1.5 w-1.5">
             <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-azure opacity-70" />
@@ -102,7 +102,7 @@ function RiskMap() {
         <div className="sea-grid pointer-events-none absolute inset-0" aria-hidden />
         <svg viewBox="0 0 100 72" className="relative block h-[340px] w-full" preserveAspectRatio="xMidYMid meet">
           {/* soft landmass hints */}
-          <g fill="#0E2E38" opacity="0.05">
+          <g fill="#0B2545" opacity="0.05">
             <ellipse cx="24" cy="30" rx="15" ry="11" />
             <ellipse cx="52" cy="30" rx="13" ry="14" />
             <ellipse cx="51" cy="52" rx="9" ry="12" />
@@ -110,7 +110,7 @@ function RiskMap() {
             <ellipse cx="37" cy="58" rx="8" ry="11" />
           </g>
           {/* graticule */}
-          <g stroke="#0E2E38" strokeWidth="0.12" opacity="0.18">
+          <g stroke="#0B2545" strokeWidth="0.12" opacity="0.18">
             {[12, 24, 36, 48, 60].map((y) => <line key={y} x1="0" y1={y} x2="100" y2={y} />)}
             {[20, 40, 60, 80].map((x) => <line key={x} x1={x} y1="0" x2={x} y2="72" />)}
           </g>
@@ -281,7 +281,7 @@ export function CommandCenter() {
 
       {/* KPI row */}
       <div className="reveal mt-6 grid grid-cols-2 gap-4 lg:grid-cols-3 xl:grid-cols-6">
-        <KPICard label="Incidents" value={formatNumber(macn.totalIncidents)} sub="10K structured · 5K narrative" icon={Layers} />
+        <KPICard label="Incidents" value={formatNumber(macn.totalIncidents)} sub="70K structured · 24K narrative" icon={Layers} />
         <KPICard label="Ports monitored" value={`${macn.ports}`} delta={`${macn.portsHighRisk} high-risk`} deltaTone="negative" icon={Ship} />
         <KPICard label="Active corridors" value={`${macn.corridors}`} sub="trade routes scored" icon={Activity} />
         <KPICard label="High-risk cases" value={formatNumber(macn.highRiskCases)} sub="restricted handling" icon={AlertTriangle} />
@@ -364,20 +364,20 @@ export function CommandCenter() {
               <AreaChart data={incidentTrend} margin={{ top: 6, right: 6, bottom: 0, left: -18 }}>
                 <defs>
                   <linearGradient id="gStruct" x1="0" y1="0" x2="0" y2="1">
-                    <stop offset="0%" stopColor="#0E2E38" stopOpacity={0.28} />
-                    <stop offset="100%" stopColor="#0E2E38" stopOpacity={0.02} />
+                    <stop offset="0%" stopColor="#0B2545" stopOpacity={0.28} />
+                    <stop offset="100%" stopColor="#0B2545" stopOpacity={0.02} />
                   </linearGradient>
                   <linearGradient id="gQual" x1="0" y1="0" x2="0" y2="1">
-                    <stop offset="0%" stopColor="#0FB5A6" stopOpacity={0.32} />
-                    <stop offset="100%" stopColor="#0FB5A6" stopOpacity={0.03} />
+                    <stop offset="0%" stopColor="#1668C4" stopOpacity={0.32} />
+                    <stop offset="100%" stopColor="#1668C4" stopOpacity={0.03} />
                   </linearGradient>
                 </defs>
                 <CartesianGrid strokeDasharray="2 4" stroke="#E2E9EB" vertical={false} />
                 <XAxis dataKey="m" tick={{ fontSize: 10, fill: '#5C7681', fontFamily: 'JetBrains Mono' }} tickLine={false} axisLine={{ stroke: '#E2E9EB' }} />
                 <YAxis tick={{ fontSize: 10, fill: '#93A7AE', fontFamily: 'JetBrains Mono' }} tickLine={false} axisLine={false} />
                 <Tooltip content={<TrendTooltip />} />
-                <Area type="monotone" dataKey="structured" stroke="#0E2E38" strokeWidth={2} fill="url(#gStruct)" />
-                <Area type="monotone" dataKey="qualitative" stroke="#0FB5A6" strokeWidth={2} fill="url(#gQual)" />
+                <Area type="monotone" dataKey="structured" stroke="#0B2545" strokeWidth={2} fill="url(#gStruct)" />
+                <Area type="monotone" dataKey="qualitative" stroke="#1668C4" strokeWidth={2} fill="url(#gQual)" />
               </AreaChart>
             </ResponsiveContainer>
           </div>

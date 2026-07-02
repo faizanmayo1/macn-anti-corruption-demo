@@ -6,24 +6,24 @@
   :root {
     /* MACN OS — "Deep Current" light theme (shadcn tokens, HSL channels) */
     --background: 200 20% 98%;          /* canvas #F7F9FA */
-    --foreground: 196 59% 10%;          /* ink #0B2129 */
+    --foreground: 213 60% 12%;          /* ink #0A1C33 */
 
     --card: 0 0% 100%;
-    --card-foreground: 196 59% 10%;
+    --card-foreground: 213 60% 12%;
 
     --popover: 0 0% 100%;
-    --popover-foreground: 196 59% 10%;
+    --popover-foreground: 213 60% 12%;
 
-    --primary: 194 60% 14%;            /* deep maritime ink #0E2E38 */
+    --primary: 213 55% 16%;            /* deep maritime ink #0B2545 */
     --primary-foreground: 0 0% 100%;
 
     --secondary: 200 18% 95%;
-    --secondary-foreground: 196 59% 10%;
+    --secondary-foreground: 213 60% 12%;
 
     --muted: 200 18% 95%;
     --muted-foreground: 199 24% 31%;    /* ink muted #3C5560 */
 
-    --accent: 174 84% 38%;             /* teal-green current #0FB5A6 */
+    --accent: 212 80% 43%;             /* teal-green current #1668C4 */
     --accent-foreground: 0 0% 100%;
 
     --destructive: 0 72% 51%;          /* high-risk / red #DC2626 */
@@ -31,7 +31,7 @@
 
     --border: 200 16% 90%;             /* hairline #E2E9EB */
     --input: 200 16% 90%;
-    --ring: 174 84% 38%;               /* focus = current */
+    --ring: 212 80% 43%;               /* focus = current */
 
     --radius: 0.625rem;
   }
@@ -55,7 +55,7 @@
     font-weight: 700;
   }
 
-  ::selection { background-color: hsl(174 84% 38% / 0.16); color: hsl(196 59% 10%); }
+  ::selection { background-color: hsl(212 80% 43% / 0.16); color: hsl(213 60% 12%); }
 
   ::-webkit-scrollbar { width: 10px; height: 10px; }
   ::-webkit-scrollbar-track { background: transparent; }
@@ -87,19 +87,19 @@
 
   /* Current rule — ink→teal hairline crowning AI / Lodestar / spotlight cards */
   .azure-rule {
-    background-image: linear-gradient(to right, #0E2E38, #0FB5A6 55%, transparent);
+    background-image: linear-gradient(to right, #0B2545, #1668C4 55%, transparent);
     height: 2px;
   }
 
   /* Scan / redaction sweep line that passes over a sensitive report */
   .scan-line {
-    background-image: linear-gradient(to bottom, transparent, hsl(174 84% 38% / 0.85), transparent);
-    box-shadow: 0 0 14px 2px hsl(174 84% 38% / 0.55);
+    background-image: linear-gradient(to bottom, transparent, hsl(212 80% 43% / 0.85), transparent);
+    box-shadow: 0 0 14px 2px hsl(212 80% 43% / 0.55);
   }
 
   /* Redaction bar — the signature anonymization motif (raw identifiers blacked out) */
   .redaction-bar {
-    background-color: #0B2129;
+    background-color: #0A1C33;
     background-image: repeating-linear-gradient(135deg, rgba(255,255,255,0.06) 0 6px, transparent 6px 12px);
     border-radius: 2px;
     color: transparent;
@@ -108,41 +108,41 @@
   /* Maritime graticule — faint sea-chart grid behind map / data surfaces */
   .sea-grid {
     background-image:
-      linear-gradient(to right, rgba(14, 46, 56, 0.045) 1px, transparent 1px),
-      linear-gradient(to bottom, rgba(14, 46, 56, 0.045) 1px, transparent 1px);
+      linear-gradient(to right, rgba(11, 37, 69, 0.045) 1px, transparent 1px),
+      linear-gradient(to bottom, rgba(11, 37, 69, 0.045) 1px, transparent 1px);
     background-size: 34px 34px;
   }
   /* alias kept so shared blueprint scaffold (court-grid) stays styled */
   .court-grid {
     background-image:
-      linear-gradient(to right, rgba(14, 46, 56, 0.045) 1px, transparent 1px),
-      linear-gradient(to bottom, rgba(14, 46, 56, 0.045) 1px, transparent 1px);
+      linear-gradient(to right, rgba(11, 37, 69, 0.045) 1px, transparent 1px),
+      linear-gradient(to bottom, rgba(11, 37, 69, 0.045) 1px, transparent 1px);
     background-size: 34px 34px;
   }
 
   /* Aurora wash — behind the AI / Lodestar panels while "thinking" */
   .aurora-wash {
     background:
-      radial-gradient(120% 80% at 12% 0%, hsl(174 84% 38% / 0.12), transparent 60%),
-      radial-gradient(120% 80% at 88% 10%, hsl(180 70% 30% / 0.08), transparent 60%);
+      radial-gradient(120% 80% at 12% 0%, hsl(212 80% 43% / 0.12), transparent 60%),
+      radial-gradient(120% 80% at 88% 10%, hsl(212 70% 32% / 0.08), transparent 60%);
   }
 
   .hero-aurora {
     background-image:
-      radial-gradient(70% 130% at 0% 0%, hsl(174 84% 38% / 0.10), transparent 55%),
-      radial-gradient(60% 130% at 100% 0%, hsl(180 70% 30% / 0.06), transparent 55%);
+      radial-gradient(70% 130% at 0% 0%, hsl(212 80% 43% / 0.10), transparent 55%),
+      radial-gradient(60% 130% at 100% 0%, hsl(212 70% 32% / 0.06), transparent 55%);
   }
 
   /* Active nav wash on the deep-ink rail */
   .nav-active-wash {
-    background-image: linear-gradient(to right, hsl(174 84% 38% / 0.18), hsl(174 84% 38% / 0.04));
+    background-image: linear-gradient(to right, hsl(212 80% 43% / 0.18), hsl(212 80% 43% / 0.04));
   }
 
   /* Ambient page atmosphere + grain */
   .app-atmosphere {
     background:
-      radial-gradient(60% 50% at 100% 0%, hsl(174 84% 38% / 0.05), transparent 60%),
-      radial-gradient(50% 40% at 0% 100%, hsl(194 60% 14% / 0.03), transparent 60%);
+      radial-gradient(60% 50% at 100% 0%, hsl(212 80% 43% / 0.05), transparent 60%),
+      radial-gradient(50% 40% at 0% 100%, hsl(213 55% 16% / 0.03), transparent 60%);
   }
   .app-grain {
     background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='140' height='140'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='2'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.025'/%3E%3C/svg%3E");
@@ -156,13 +156,13 @@
   /* Page-header aura — a quiet current wash behind the title block */
   .page-hero-wash {
     background-image:
-      radial-gradient(60% 120% at 0% 0%, hsl(174 84% 38% / 0.07), transparent 60%),
-      radial-gradient(40% 100% at 100% 0%, hsl(194 60% 14% / 0.03), transparent 60%);
+      radial-gradient(60% 120% at 0% 0%, hsl(212 80% 43% / 0.07), transparent 60%),
+      radial-gradient(40% 100% at 100% 0%, hsl(213 55% 16% / 0.03), transparent 60%);
   }
 
   /* Deep-ink rail brand glow at the top of the sidebar */
   .rail-glow {
-    background-image: radial-gradient(80% 60% at 20% 0%, hsl(174 84% 38% / 0.16), transparent 70%);
+    background-image: radial-gradient(80% 60% at 20% 0%, hsl(212 80% 43% / 0.16), transparent 70%);
   }
 
   /* Premium surface — soft layered depth + crisp inner top highlight */
@@ -178,7 +178,7 @@
     position: absolute;
     inset: 0 0 auto 0;
     height: 2px;
-    background-image: linear-gradient(to right, transparent, hsl(174 84% 38% / 0.9), transparent);
+    background-image: linear-gradient(to right, transparent, hsl(212 80% 43% / 0.9), transparent);
     opacity: 0;
     transition: opacity 0.2s ease;
   }
@@ -188,7 +188,7 @@
   .card-lift:hover { transform: translateY(-2px); }
 
   .text-azure-gradient {
-    background-image: linear-gradient(120deg, #0E2E38, #0FB5A6 70%);
+    background-image: linear-gradient(120deg, #0B2545, #1668C4 70%);
     -webkit-background-clip: text;
     background-clip: text;
     color: transparent;
@@ -209,17 +209,17 @@
   /* Sonar rings backdrop — risk pulses radiating from a hotspot port */
   .sonar-rings {
     background-image:
-      radial-gradient(circle at 50% 50%, transparent 0, transparent 27%, rgba(15, 181, 166, 0.07) 27.4%, transparent 28.4%),
-      radial-gradient(circle at 50% 50%, transparent 0, transparent 39%, rgba(15, 181, 166, 0.06) 39.4%, transparent 40.4%),
-      radial-gradient(circle at 50% 50%, transparent 0, transparent 51%, rgba(15, 181, 166, 0.05) 51.4%, transparent 52.4%),
-      radial-gradient(circle at 50% 50%, transparent 0, transparent 63%, rgba(15, 181, 166, 0.04) 63.4%, transparent 64.4%);
+      radial-gradient(circle at 50% 50%, transparent 0, transparent 27%, rgba(22, 104, 196, 0.07) 27.4%, transparent 28.4%),
+      radial-gradient(circle at 50% 50%, transparent 0, transparent 39%, rgba(22, 104, 196, 0.06) 39.4%, transparent 40.4%),
+      radial-gradient(circle at 50% 50%, transparent 0, transparent 51%, rgba(22, 104, 196, 0.05) 51.4%, transparent 52.4%),
+      radial-gradient(circle at 50% 50%, transparent 0, transparent 63%, rgba(22, 104, 196, 0.04) 63.4%, transparent 64.4%);
   }
   /* alias kept for shared scaffold (pool-rings) */
   .pool-rings {
     background-image:
-      radial-gradient(circle at 50% 50%, transparent 0, transparent 27%, rgba(15, 181, 166, 0.07) 27.4%, transparent 28.4%),
-      radial-gradient(circle at 50% 50%, transparent 0, transparent 39%, rgba(15, 181, 166, 0.06) 39.4%, transparent 40.4%),
-      radial-gradient(circle at 50% 50%, transparent 0, transparent 51%, rgba(15, 181, 166, 0.05) 51.4%, transparent 52.4%));
+      radial-gradient(circle at 50% 50%, transparent 0, transparent 27%, rgba(22, 104, 196, 0.07) 27.4%, transparent 28.4%),
+      radial-gradient(circle at 50% 50%, transparent 0, transparent 39%, rgba(22, 104, 196, 0.06) 39.4%, transparent 40.4%),
+      radial-gradient(circle at 50% 50%, transparent 0, transparent 51%, rgba(22, 104, 196, 0.05) 51.4%, transparent 52.4%));
   }
 
   /* Staggered entrance for grids of cards */
@@ -233,7 +233,7 @@
   /* Phone device frame */
   .device-frame {
     border-radius: 2.6rem;
-    background: linear-gradient(160deg, #143C49, #0E2E38);
+    background: linear-gradient(160deg, #123056, #0B2545);
     padding: 11px;
     box-shadow: 0 30px 60px -18px rgba(11, 33, 41, 0.42), 0 12px 24px -10px rgba(11, 33, 41, 0.22);
   }

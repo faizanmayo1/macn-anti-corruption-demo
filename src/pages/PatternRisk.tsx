@@ -43,7 +43,7 @@ const threatTone: Record<Threat['tone'], { dot: string; icon: typeof Info }> = {
   info: { dot: 'bg-azure', icon: Info },
 }
 
-const riskColor = (s: number) => (s >= 80 ? '#DC2626' : s >= 65 ? '#CE7519' : s >= 50 ? '#2F5763' : '#15803D')
+const riskColor = (s: number) => (s >= 80 ? '#DC2626' : s >= 65 ? '#CE7519' : s >= 50 ? '#3B5178' : '#15803D')
 
 function ForecastTooltip({ active, payload, label }: ChartTooltipProps) {
   if (!active || !payload?.length) return null
@@ -52,7 +52,7 @@ function ForecastTooltip({ active, payload, label }: ChartTooltipProps) {
     <div className="rounded-lg border border-hairline bg-card/95 px-3 py-2 shadow-card-md backdrop-blur">
       <p className="font-mono text-[10px] uppercase tracking-[0.1em] text-ink-subtle">{label}</p>
       <p className="mt-0.5 flex items-center gap-1.5 text-[12px] text-ink">
-        <span className="h-2 w-2 rounded-full" style={{ background: payload.some((p) => p.dataKey === 'forecast' && p.value != null) && !payload.some((p) => p.dataKey === 'actual' && p.value != null) ? '#CE7519' : '#0FB5A6' }} />
+        <span className="h-2 w-2 rounded-full" style={{ background: payload.some((p) => p.dataKey === 'forecast' && p.value != null) && !payload.some((p) => p.dataKey === 'actual' && p.value != null) ? '#CE7519' : '#1668C4' }} />
         corridor risk <span className="ml-auto font-mono font-semibold tabular">{v?.value}</span>
       </p>
     </div>
@@ -196,8 +196,8 @@ export function PatternRisk() {
               <AreaChart data={forecast} margin={{ top: 8, right: 10, bottom: 0, left: -18 }}>
                 <defs>
                   <linearGradient id="gActual" x1="0" y1="0" x2="0" y2="1">
-                    <stop offset="0%" stopColor="#0FB5A6" stopOpacity={0.3} />
-                    <stop offset="100%" stopColor="#0FB5A6" stopOpacity={0.02} />
+                    <stop offset="0%" stopColor="#1668C4" stopOpacity={0.3} />
+                    <stop offset="100%" stopColor="#1668C4" stopOpacity={0.02} />
                   </linearGradient>
                   <linearGradient id="gForecast" x1="0" y1="0" x2="0" y2="1">
                     <stop offset="0%" stopColor="#CE7519" stopOpacity={0.22} />
@@ -209,8 +209,8 @@ export function PatternRisk() {
                 <YAxis domain={[40, 100]} tick={{ fontSize: 10, fill: '#93A7AE', fontFamily: 'JetBrains Mono' }} tickLine={false} axisLine={false} />
                 <Tooltip content={<ForecastTooltip />} />
                 <ReferenceLine y={reportingThreshold} stroke="#DC2626" strokeDasharray="4 3" strokeOpacity={0.6} label={{ value: 'Formal-reporting threshold', position: 'insideTopRight', fontSize: 9, fill: '#DC2626', fontFamily: 'JetBrains Mono' }} />
-                <ReferenceLine x="Jun" stroke="#0A7E73" strokeDasharray="3 3" label={{ value: 'Detected · 19d early', position: 'insideBottomLeft', fontSize: 9, fill: '#0A7E73', fontFamily: 'JetBrains Mono' }} />
-                <Area type="monotone" dataKey="actual" stroke="#0FB5A6" strokeWidth={2.4} fill="url(#gActual)" isAnimationActive={false} connectNulls />
+                <ReferenceLine x="Jun" stroke="#0E4C93" strokeDasharray="3 3" label={{ value: 'Detected · 19d early', position: 'insideBottomLeft', fontSize: 9, fill: '#0E4C93', fontFamily: 'JetBrains Mono' }} />
+                <Area type="monotone" dataKey="actual" stroke="#1668C4" strokeWidth={2.4} fill="url(#gActual)" isAnimationActive={false} connectNulls />
                 <Area type="monotone" dataKey="forecast" stroke="#CE7519" strokeWidth={2.2} strokeDasharray="5 3" fill="url(#gForecast)" isAnimationActive={false} connectNulls />
               </AreaChart>
             </ResponsiveContainer>

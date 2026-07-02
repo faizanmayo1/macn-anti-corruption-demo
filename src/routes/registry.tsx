@@ -24,7 +24,7 @@ export interface RouteEntry {
 }
 
 export const routeRegistry: RouteEntry[] = [
-  { path: ROUTES.root, end: true, section: 'Overview', label: 'Intelligence Command Center', short: 'Command Center', eyebrow: '15,000 incidents · 50 ports', icon: LayoutDashboard },
+  { path: ROUTES.root, end: true, section: 'Overview', label: 'Intelligence Command Center', short: 'Command Center', eyebrow: '94,000 incidents · 1,350 ports', icon: LayoutDashboard },
 
   { path: ROUTES.incident, section: 'Intelligence', label: 'Incident Intelligence View', short: 'Incident Intelligence', eyebrow: 'Salesforce + narrative', icon: FileSearch },
   { path: ROUTES.anonymize, section: 'Intelligence', label: 'Anonymization & Redaction Engine', short: 'Anonymization Engine', eyebrow: 'Sensitive → safe', icon: EyeOff, badge: { text: 'AI', variant: 'ai' } },

@@ -152,9 +152,9 @@ export function AnonymizationEngine() {
   return (
     <div className="mx-auto max-w-[1320px] px-4 py-7 lg:px-8">
       <PageHeader
-        eyebrow="Intelligence · Sensitive-Data Safety"
-        title="Sensitive in. Safe out. Nothing analytical lost."
-        description="Lodestar ingests a raw qualitative report, classifies its sensitivity, removes every direct identifier and abstracts locations — then emits an analytics-safe record alongside an encrypted vault copy, with a full log of what changed and why."
+        eyebrow="Intelligence · AI Guardrail"
+        title="The guardrail between sensitive data and the AI."
+        description="An AI guardrail agent sits between raw qualitative data and the LLM: it classifies sensitivity, removes every direct identifier and abstracts locations — masking sensitive content before any AI ever processes it. It emits an analytics-safe record alongside an encrypted vault copy, with a full log of what changed and why."
         actions={
           <>
             <span className="hidden items-center gap-1.5 rounded-full border border-hairline bg-card px-3 py-1.5 font-mono text-[10px] uppercase tracking-[0.08em] text-ink-subtle md:inline-flex">

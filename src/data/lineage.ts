@@ -21,8 +21,8 @@ export const lineage: LineageNode[] = [
   {
     id: 'n1', stage: 'Sources', title: '29 source records', summary: '23 qualitative reports + 6 Salesforce cases',
     actor: 'Ingestion service', time: 'T-60d → T-0', hash: '9f2a…c71b', kind: 'source',
-    detail: 'Whistleblower narratives, NGO reports and port-level intel ingested via the secure member portal, plus structured Salesforce incident records.',
-    inputs: 'Member portal · NGO feeds · Salesforce', output: '29 raw records → Restricted Vault',
+    detail: 'Seafarer HelpDesk reports, free-text incident-report comments and member submissions ingested via the secure member portal, plus structured Salesforce incident records.',
+    inputs: 'HelpDesk · Report comments · Salesforce', output: '29 raw records → Restricted Vault',
   },
   {
     id: 'n2', stage: 'Normalization', title: 'Taxonomy & entity normalization', summary: 'Ports, regions, actors, typology standardized',

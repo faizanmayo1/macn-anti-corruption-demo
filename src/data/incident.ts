@@ -37,7 +37,7 @@ export const structuredFields: StructuredField[] = [
 export interface LinkedReport {
   id: string
   source: string
-  kind: 'Whistleblower' | 'NGO report' | 'Member submission' | 'Port intel'
+  kind: 'HelpDesk' | 'Report comment' | 'Member submission'
   snippet: string
   severity: 'critical' | 'high' | 'medium'
   confidence: number
@@ -45,10 +45,10 @@ export interface LinkedReport {
 }
 
 export const linkedReports: LinkedReport[] = [
-  { id: 'INC-08842', source: 'Whistleblower narrative', kind: 'Whistleblower', snippet: 'Inspection-hold cash demand (~USD 4.5K) by a port inspector at Lagos / West Africa.', severity: 'critical', confidence: 0.97, hero: true },
-  { id: 'QR-2210', source: 'NGO maritime watch', kind: 'NGO report', snippet: 'Repeated facilitation demands reported by crews at Apapa berths over Q1.', severity: 'high', confidence: 0.88 },
+  { id: 'INC-08842', source: 'Seafarer HelpDesk report', kind: 'HelpDesk', snippet: 'Inspection-hold cash demand (~USD 4.5K) by a port inspector at Lagos / West Africa.', severity: 'critical', confidence: 0.97, hero: true },
+  { id: 'QR-2210', source: 'Incident report comment', kind: 'Report comment', snippet: 'Repeated facilitation demands reported by crews at Apapa berths over Q1.', severity: 'high', confidence: 0.88 },
   { id: 'QR-2204', source: 'Member submission', kind: 'Member submission', snippet: 'Vessel held pending an informal “processing fee” before clearance at Lagos.', severity: 'high', confidence: 0.84 },
-  { id: 'QR-2191', source: 'Port-level intelligence', kind: 'Port intel', snippet: 'Local inspectorate unit flagged for repeated cash demands on bulk carriers.', severity: 'medium', confidence: 0.79 },
+  { id: 'QR-2191', source: 'HelpDesk email', kind: 'HelpDesk', snippet: 'Local inspectorate unit flagged for repeated cash demands on bulk carriers.', severity: 'medium', confidence: 0.79 },
 ]
 
 export interface TaxonomyMap {

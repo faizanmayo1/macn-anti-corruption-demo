@@ -10,13 +10,13 @@ Driver: **Adnan**. Run `npm run dev` and present full-screen. Persona shown thro
 
 ## 0 · Open — Command Center (`/`) · ~90s
 **Show:** the global risk map (Gulf of Guinea cluster pulsing), the KPI band, the Lodestar digest.
-**Say:** "This is one secure layer over *all* your corruption signals — 10,000 structured Salesforce incidents and 5,000 sensitive qualitative reports, unified. Salesforce stays your system of record; we add the intelligence."
+**Say:** "This is one secure layer over *all* your corruption signals — ~70,000 structured Salesforce incidents (your GPIP data) and tens of thousands of sensitive qualitative sources — report comments and HelpDesk emails — unified across 230 members. Salesforce stays your system of record; we add the intelligence."
 **Point to:** the "98.7% auto-sanitized" KPI and the raw→sanitized strip. "Notice safety is on the front page, not an afterthought."
 **Tie-in:** sets scale + signals that confidentiality is the organizing principle.
 
 ## 1 · The hero — Anonymization Engine (`/anonymize`) · ~3 min ⭐
 **Show:** click **Replay** so the pipeline animates: Ingest → Classify → Redact & Abstract → Dual Output.
-**Say:** "Here's a real whistleblower narrative — names the master, the inspector, the vessel, the company, the berth. Watch Lodestar handle it."
+**Say:** "This is the AI **guardrail** — it sits between your raw data and the LLM and masks everything sensitive *before* any AI touches it. Here's a real seafarer HelpDesk report — it names the master, the inspector, the vessel, the company, the berth. Watch the guardrail handle it."
 **Point to, in order:**
 - Classification → **"Highly Sensitive, 96%."**
 - The raw→sanitized transform → identities become redaction bars; "berth 12, Apapa" becomes "Lagos / West Africa."
@@ -47,11 +47,11 @@ Driver: **Adnan**. Run `npm run dev` and present full-screen. Persona shown thro
 
 ## 6 · Member value — Member Portal (`/members`) · ~1.5 min
 **Show:** the member view ("Northwind Carriers").
-**Say:** "This is what a member logs in to see — high-risk ports *on their routes*, anonymized trends, and concrete mitigations. Real value delivered, zero sensitive leakage."
+**Say:** "This is what a member logs in to see — high-risk ports *on their routes*, anonymized trends, and concrete mitigations. It flows through your **existing member API**, and it's simple enough for a captain to act on at the port call. Real value delivered, zero sensitive leakage."
 
 ## 7 · Capstone — Lodestar Copilot (`/copilot`) · ~1.5 min
 **Show:** the cited answer; click a different suggested prompt to switch.
-**Say:** "Ask in plain language. Every answer is cited and comes with a decision-audit — the sources it used, its reasoning, and proof it **never touched the restricted vault.**"
+**Say:** "This is what moves you **beyond static Tableau dashboards.** Instead of a fixed 'top 3 demands' chart, members ask in plain language and get a dynamic, cited port-risk answer. Every answer comes with a decision-audit — the sources it used, its reasoning, and proof it **never touched the restricted vault.**"
 **Close:** "From a single sensitive report to governed, trusted, board-ready intelligence — safely, the whole way."
 
 ---
@@ -60,7 +60,8 @@ Driver: **Adnan**. Run `npm run dev` and present full-screen. Persona shown thro
 - **"Is our Salesforce data duplicated?"** → No — augmentation layer, AI fields written back, Salesforce remains system of record (show `/incident`).
 - **"Who can see the raw reports?"** → Only MACN admins, in the encrypted vault; everything downstream is sanitized (show `/vault`).
 - **"How do we prove what the AI did?"** → Full immutable lineage + explainability log (show `/audit` + `/anonymize`).
-- **"Is this real data?"** → Pilot-scale illustrative data modeling your environment (50 ports, 20 corridors, 30 members, 5-yr history); pilot would run on your actual Salesforce + reports.
+- **"Is this real data?"** → Illustrative data modeling your environment (1,350+ ports, 20 corridors, 230 members, 5-yr history); pilot would run on your actual Salesforce + reports.
+- **"Can you also redesign our Tableau dashboards?"** → Yes — the copilot replaces static views, and we can redesign the existing dashboards for visual appeal and MACN branding as part of the engagement.
 
 ## Pilot ask (close)
 Propose a scoped pilot on a slice of real data — a handful of ports/corridors — to validate anonymization quality and pattern detection against MACN's own reports.

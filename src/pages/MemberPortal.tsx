@@ -31,10 +31,10 @@ import {
 import type { ChartTooltipProps } from '@/utils/chart'
 import { cn } from '@/utils/cn'
 
-const bandColor: Record<Band, string> = { high: '#DC2626', elevated: '#CE7519', watch: '#2F5763', clear: '#15803D' }
+const bandColor: Record<Band, string> = { high: '#DC2626', elevated: '#CE7519', watch: '#3B5178', clear: '#15803D' }
 const bandLabel: Record<Band, string> = { high: 'High-risk', elevated: 'Elevated', watch: 'Watch', clear: 'Clear' }
 
-const riskColor = (s: number) => (s >= 80 ? '#DC2626' : s >= 65 ? '#CE7519' : s >= 50 ? '#2F5763' : '#15803D')
+const riskColor = (s: number) => (s >= 80 ? '#DC2626' : s >= 65 ? '#CE7519' : s >= 50 ? '#3B5178' : '#15803D')
 
 function TrendTooltip({ active, payload, label }: ChartTooltipProps) {
   if (!active || !payload?.length) return null
@@ -52,7 +52,7 @@ export function MemberPortal() {
       <PageHeader
         eyebrow="Members · Safe Intelligence Sharing"
         title="Your routes, your risk — safely shared."
-        description="Member-facing intelligence drawn only from the sanitized analytics layer: high-risk ports on your routes, anonymized regional trends and recommended mitigations. No incident-level detail, no identities — ever."
+        description="Qualitative insight delivered through your existing member API channel — simple enough to act on at the port call. Drawn only from the sanitized analytics layer: high-risk ports on your routes, anonymized regional trends and clear mitigations for masters. No incident-level detail, no identities — ever."
         actions={
           <span className="inline-flex items-center gap-1.5 rounded-full border border-signal-positive/30 bg-signal-positive-soft px-3 py-1.5 font-mono text-[10px] uppercase tracking-[0.08em] text-signal-positive">
             <ShieldCheck className="h-3.5 w-3.5" /> No sensitive leakage
@@ -134,15 +134,15 @@ export function MemberPortal() {
               <AreaChart data={memberTrend} margin={{ top: 6, right: 4, bottom: 0, left: -22 }}>
                 <defs>
                   <linearGradient id="gMember" x1="0" y1="0" x2="0" y2="1">
-                    <stop offset="0%" stopColor="#0FB5A6" stopOpacity={0.3} />
-                    <stop offset="100%" stopColor="#0FB5A6" stopOpacity={0.02} />
+                    <stop offset="0%" stopColor="#1668C4" stopOpacity={0.3} />
+                    <stop offset="100%" stopColor="#1668C4" stopOpacity={0.02} />
                   </linearGradient>
                 </defs>
                 <CartesianGrid strokeDasharray="2 4" stroke="#E2E9EB" vertical={false} />
                 <XAxis dataKey="m" tick={{ fontSize: 9, fill: '#93A7AE', fontFamily: 'JetBrains Mono' }} tickLine={false} axisLine={{ stroke: '#E2E9EB' }} />
                 <YAxis tick={{ fontSize: 9, fill: '#93A7AE', fontFamily: 'JetBrains Mono' }} tickLine={false} axisLine={false} />
                 <Tooltip content={<TrendTooltip />} />
-                <Area type="monotone" dataKey="incidents" stroke="#0FB5A6" strokeWidth={2} fill="url(#gMember)" isAnimationActive={false} />
+                <Area type="monotone" dataKey="incidents" stroke="#1668C4" strokeWidth={2} fill="url(#gMember)" isAnimationActive={false} />
               </AreaChart>
             </ResponsiveContainer>
           </div>

@@ -10,40 +10,40 @@ import animate from 'tailwindcss-animate'
 // Token keys kept as steel/azure/cyan/gold/amber (+ navy/sky/volt aliases) so the shared
 // shadcn + blueprint primitives stay wired unedited; only the VALUES are remapped.
 
-// Structure / primary — deep maritime ink (MACN governance brand)
+// Structure / primary — deep MARITIME NAVY (MACN governance brand)
 const steel = {
-  DEFAULT: '#0E2E38',
-  raised: '#143C49',
-  line: '#23525E',
-  muted: '#6E8794',
-  soft: '#A9BEC6',
-  fore: '#E8F1F3',
-  50: '#EDF3F4',
-  100: '#D6E2E5',
-  200: '#AEC6CB',
-  300: '#7FA3AB',
-  400: '#537B85',
-  500: '#2F5763',
-  600: '#1F4651',
-  700: '#193E48',
-  800: '#0E2E38',
-  900: '#08212A',
+  DEFAULT: '#0B2545',
+  raised: '#123056',
+  line: '#25446E',
+  muted: '#6B7F9E',
+  soft: '#A6B4CC',
+  fore: '#E9EEF6',
+  50: '#EEF1F7',
+  100: '#DCE2EE',
+  200: '#B9C5DC',
+  300: '#8D9EC1',
+  400: '#5F739C',
+  500: '#3B5178',
+  600: '#28406A',
+  700: '#1C3159',
+  800: '#0B2545',
+  900: '#071B34',
 }
 
-// TEAL-GREEN "current" accent — AI / Lodestar / sanitized-safe + live pulse
+// CORPORATE BLUE "current" accent — AI / Lodestar / sanitized-safe + live pulse (MACN brand blue)
 const cyan = {
-  DEFAULT: '#0FB5A6',
-  deep: '#0A7E73',
-  soft: '#DCF6F1',
-  glow: '#34D6C6',
-  50: '#ECFBF8',
-  100: '#CCF3EC',
-  200: '#9DE7DB',
-  300: '#5FD6C7',
-  400: '#2EC4B4',
-  500: '#0FB5A6',
-  600: '#0E9C8F',
-  700: '#0B8175',
+  DEFAULT: '#1668C4',
+  deep: '#0E4C93',
+  soft: '#DCEAFA',
+  glow: '#4E97E6',
+  50: '#EEF5FD',
+  100: '#D4E6FA',
+  200: '#A8CCF3',
+  300: '#72ACEA',
+  400: '#3D8AE0',
+  500: '#1668C4',
+  600: '#125AAA',
+  700: '#0E4C93',
 }
 
 // RISK-AMBER accent — corruption-risk / high-risk port / early-warning emphasis
@@ -90,7 +90,7 @@ export default {
 
         // MACN "Deep Current" palette
         canvas: { DEFAULT: '#F7F9FA', subtle: '#EEF2F4', raised: '#FFFFFF' },
-        ink: { DEFAULT: '#0B2129', muted: '#3C5560', subtle: '#5C7681', faint: '#93A7AE' },
+        ink: { DEFAULT: '#0A1C33', muted: '#39506A', subtle: '#5A7089', faint: '#93A2B6' },
         hairline: { DEFAULT: '#E2E9EB', strong: '#CFDADD' },
         // Structure — deep maritime ink
         steel,
@@ -113,8 +113,8 @@ export default {
           'warning-soft': '#FBEAD2',
           risk: '#DC2626',
           'risk-soft': '#FEE2E2',
-          info: '#0A7E73',
-          'info-soft': '#DCF6F1',
+          info: '#0E4C93',
+          'info-soft': '#DCEAFA',
           neutral: '#5C7681',
           'neutral-soft': '#EEF2F4',
         },
@@ -126,9 +126,9 @@ export default {
         'card-md': '0 4px 10px rgba(11, 33, 41, 0.06), 0 14px 32px -6px rgba(11, 33, 41, 0.10)',
         'card-lg': '0 18px 50px -10px rgba(11, 33, 41, 0.22), 0 6px 14px -4px rgba(11, 33, 41, 0.08)',
         inset: 'inset 0 0 0 1px rgba(11, 33, 41, 0.05)',
-        'volt-glow': '0 0 0 4px rgba(15, 181, 166, 0.14)',
-        'volt-lift': '0 10px 30px -8px rgba(15, 181, 166, 0.28), 0 4px 10px -4px rgba(11, 33, 41, 0.12)',
-        'cta': '0 6px 18px -4px rgba(15, 181, 166, 0.42), inset 0 1px 0 rgba(255, 255, 255, 0.18)',
+        'volt-glow': '0 0 0 4px rgba(22, 104, 196, 0.16)',
+        'volt-lift': '0 10px 30px -8px rgba(22, 104, 196, 0.28), 0 4px 10px -4px rgba(11, 33, 41, 0.12)',
+        'cta': '0 6px 18px -4px rgba(22, 104, 196, 0.42), inset 0 1px 0 rgba(255, 255, 255, 0.18)',
         'gold-lift': '0 10px 30px -8px rgba(206, 117, 25, 0.30), 0 4px 10px -4px rgba(11, 33, 41, 0.12)',
         'device': '0 30px 60px -18px rgba(11, 33, 41, 0.42), 0 12px 24px -10px rgba(11, 33, 41, 0.22)',
       },

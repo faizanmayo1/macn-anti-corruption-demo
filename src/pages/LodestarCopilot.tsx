@@ -26,8 +26,8 @@ export function LodestarCopilot() {
     <div className="mx-auto max-w-[1320px] px-4 py-7 lg:px-8">
       <PageHeader
         eyebrow="Assistant · Ask · Explain · Trace"
-        title="Ask the data. Trust every answer."
-        description="A natural-language way to interrogate the sanitized intelligence layer. Every answer is cited to its sources and backed by a traceable decision rationale — and the copilot never surfaces restricted-vault content."
+        title="Beyond static dashboards. Ask the data directly."
+        description="A Salesforce-integrated copilot that turns the sanitized intelligence layer into dynamic, natural-language port-risk assessments — replacing static Tableau views (e.g. “top 3 demands”) with answers members can actually ask. Every answer is cited to its sources, backed by a traceable rationale, and never surfaces restricted-vault content."
         meta={
           <>
             <HeaderStat label="grounded in" value="sanitized layer" tone="azure" />
